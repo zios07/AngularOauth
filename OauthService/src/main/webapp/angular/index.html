@@ -2,11 +2,13 @@
 <html >
 <head>
   <meta charset="UTF-8">
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
   <title>Material design sign up form</title>
       <link rel="stylesheet" href="css/style.css">
+      <script type="text/javascript" src="js/script.js"></script>
 </head>
 
-<body id="authBody">
+<body id="authBody" ng-app="myApp" ng-controller="authenticationCtrl">
   <div id="login-box">
   <div class="left">
     <h1>Sign up</h1>
@@ -23,8 +25,8 @@
     <span class="loginwith">Sign in with<br />social network</span>
 
     <button class="social-signin linkedIn">Log in with LinkedIn</button>
-    <button class="social-signin google">Log in with Google+</button>
-
+    <button class="social-signin google" ng-click="goToGoogle()">Log in with Google+</button>
+	
   </div>
   <div class="or">OR</div>
 </div>

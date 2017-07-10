@@ -13,7 +13,7 @@ public class ReqHandler {
 	GoogleAuth helper = new GoogleAuth();
 	
 	@GET
-	@Path("/hi")
+	@Path("/loginUrl")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String sayHi() {
 		return helper.buildLoginUrl();
