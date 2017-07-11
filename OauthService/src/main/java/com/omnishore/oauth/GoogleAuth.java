@@ -34,7 +34,7 @@ public class GoogleAuth implements Serializable{
 	/**
 	 * Callback URI that google will redirect to after successful authentication
 	 */
-	private static final String CALLBACK_URI = "http://localhost:8080/OauthService/webapi/auth/loginUrl";
+	private static final String CALLBACK_URI = "http://localhost:8080/OauthService/angular/index.html";
 	
 	// start google authentication constants
 	private static final Iterable<String> SCOPE = Arrays.asList("https://www.googleapis.com/auth/userinfo.profile;https://www.googleapis.com/auth/userinfo.email".split(";"));
