@@ -1,36 +1,45 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-  <title>Material design sign up form</title>
-      <link rel="stylesheet" href="css/style.css">
-      <script type="text/javascript" src="js/script.js"></script>
+<meta charset="UTF-8">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<title>Material design sign up form</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body id="authBody" ng-app="myApp" ng-controller="authenticationCtrl">
-  <div id="login-box">
-  <div class="left">
-    <h1>Sign up</h1>
+	<div id="login-box">
+		<div class="left">
+			<h1>Sign up</h1>
 
+			{{code}}
+			<input class="authInputs" type="text" name="username"
+				placeholder="Username" /> <input class="authInputs" type="text"
+				name="email" placeholder="E-mail" /> <input class="authInputs"
+				type="password" name="password" placeholder="Password" /> <input
+				class="authInputs" type="password" name="password2"
+				placeholder="Retype password" /> <input type="submit"
+				id="signUpSubmit" name="signup_submit" value="Sign me up" />
+		</div>
 
-    <input class="authInputs" type="text" name="username" placeholder="Username" />
-    <input class="authInputs" type="text" name="email" placeholder="E-mail" />
-    <input class="authInputs" type="password" name="password" placeholder="Password" />
-    <input class="authInputs" type="password" name="password2" placeholder="Retype password" />
+		<div class="right">
+			<span class="loginwith">Sign in with<br />social network
+			</span>
 
-    <input type="submit" id="signUpSubmit" name="signup_submit" value="Sign me up" />
-  </div>
+			<button class="social-signin linkedIn" ng-click="getUserInfo()">Log in with LinkedIn</button>
+			<button class="social-signin google" ng-click="getAuthorizationUrl()">Log
+				in with Google+</button>
 
-  <div class="right"> 
-    <span class="loginwith">Sign in with<br />social network</span>
-
-    <button class="social-signin linkedIn">Log in with LinkedIn</button>
-    <button class="social-signin google" ng-click="goToGoogle()">Log in with Google+</button>
-	
-  </div>
-  <div class="or">OR</div>
-</div>
+		</div>
+		<div class="or">OR</div>
+		<div id="userInfo">
+			{{profilePhoto}} --- {{firstName}}		
+			<img href="{{profilePhoto}}" alt="no image"/>
+			<span>Welcome {{lastName + " " + firstName}}</span>
+		</div>
+	</div>
 
 
 </body>
